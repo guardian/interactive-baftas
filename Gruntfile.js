@@ -14,7 +14,7 @@ module.exports = function(grunt) {
           livereload: true,
           base: './',
           middleware: function (connect, options, middlewares) {
-            // inject a custom middleware http://stackoverflow.com/a/24508523 
+            // inject a custom middleware http://stackoverflow.com/a/24508523
             middlewares.unshift(function (req, res, next) {
                 res.setHeader('Access-Control-Allow-Origin', '*');
                 res.setHeader('Access-Control-Allow-Methods', '*');
@@ -29,8 +29,7 @@ module.exports = function(grunt) {
     sass: {
       options: {
             //includePaths: ['bower_components/'],
-            style: (isDev) ? 'expanded' : 'compressed',
-            sourcemap: (isDev) ? 'inline' : 'none'
+            style: (isDev) ? 'expanded' : 'compressed'
        },
         build: {
             files: { 'build/assets/css/main.css': 'src/css/main.scss' }
@@ -47,7 +46,7 @@ module.exports = function(grunt) {
     jshint: {
       options: {
           jshintrc: true,
-          force: true 
+          force: true
       },
       files: ['Gruntfile.js', 'src/*.js', 'src/js/*.js', 'src/js/app/**/*.js']
     },
@@ -61,7 +60,7 @@ module.exports = function(grunt) {
           inlineText: true,
           name: '../libs/almond',
           out: 'build/assets/js/main.js',
-          generateSourceMaps: true, 
+          generateSourceMaps: true,
           preserveLicenseComments: false,
           include: ['main'],
           wrap: {
@@ -190,8 +189,8 @@ module.exports = function(grunt) {
             ]
         }
     },
-    
-    // Download files locally 
+
+    // Download files locally
     curl: {
       'src/js/app/data/sampleData.json': pkg.config.data_url
     }
@@ -213,7 +212,7 @@ module.exports = function(grunt) {
 
   // Tasks
   grunt.registerTask('fetch', ['curl']);
-  
+
   grunt.registerTask('build', [
     'jshint',
     'clean',
@@ -222,9 +221,9 @@ module.exports = function(grunt) {
     'requirejs',
     'copy'
   ]);
-  
+
   grunt.registerTask('default', ['build', 'replace:local', 'connect',  'watch']);
-  
+
   grunt.registerTask('deploy', [
       'build',
       'rename',
@@ -232,4 +231,3 @@ module.exports = function(grunt) {
       's3'
   ]);
 };
-
