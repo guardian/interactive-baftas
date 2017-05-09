@@ -1,6 +1,6 @@
 # Interactive Baftas Gallery
 
-Interactive Baftas Gallery. Using interactive template. 
+Interactive Baftas Gallery. Using interactive template.
 
 
 
@@ -15,6 +15,7 @@ Fork the project over on github then clone your new fork.
 > git clone git@github.com:guardian/my-new-project.git
 > cd my-new-project
 > npm install
+> bower install
 > grunt
 ```
 
