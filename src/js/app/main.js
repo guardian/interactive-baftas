@@ -17,9 +17,9 @@ define([
     iframeMessenger
 ) {
    'use strict';
-    
+
     // Your proxied Google spreadsheet goes here
-    var key = '1I0QaErXTMHpTbPZvCCXrqg4tgsWsVTyGGLHRNsFGb1c', 
+    var key = '1Zdk4ji8yecIE-In8a0SBs3RZBtbmQ-nSqIl590gZjg0',
         archUrl = 'https://interactive.guim.co.uk/docsdata-test/'+key+'.json';
 
     var config;
@@ -94,7 +94,7 @@ define([
             row.rowClass = (row.class) ? row.class : false;
             row.caption = (row.caption) ? row.caption.split(/\n/) : "";
             row.isRow = (row.rowClass !== "outro") ? true : false;
-            
+
             paragraphs = paragraphs.map(function(paragraph){
                 return paragraph.replace(/^::/g, "<strong>").replace(/::$|::\s$/, "</strong>");
             });
@@ -117,8 +117,8 @@ define([
         if(typeof window.guardian === "undefined"){
             // isWeb = false;
         }
-        
-        var templateData = { 
+
+        var templateData = {
             style: styleConfig,
             rows: dataRows,
             title: title,
@@ -129,7 +129,7 @@ define([
             isWeb: isWeb,
             imagePath: imagePath
         },pageHtml = Mustache.render(template, templateData);
-        
+
 
         $('.element-interactive.interactive').html(pageHtml);
 
@@ -150,7 +150,7 @@ define([
 
     function expandText(e){
         var state = $(e.currentTarget).attr('data-toggle');
-        
+
         if(state==="readMore"){
             trackEvent(e);
             $(e.currentTarget).closest('.rowContainer').addClass('active');
@@ -179,7 +179,7 @@ define([
             "#ff0080",
             "#ff0040"
         ];
-        
+
         // bod.style.backgroundColor = imgEl.dataset.clr;
         // window.addEventListener("scroll", function(){
         //     console.log("scrollin'");
@@ -192,8 +192,8 @@ define([
         var ending_color = new $.Color( 'rgb(0,197,209)' ); ;//what color we want to use in the end
 
         $(document).scroll(function(){
-            scroll_pos = $(this).scrollTop(); 
-            if(scroll_pos >= animation_begin_pos && scroll_pos <= animation_end_pos ) { 
+            scroll_pos = $(this).scrollTop();
+            if(scroll_pos >= animation_begin_pos && scroll_pos <= animation_end_pos ) {
 
                 //we want to calculate the relevant transitional rgb value
                 var percentScrolled = scroll_pos / ( animation_end_pos - animation_begin_pos );
@@ -221,7 +221,7 @@ define([
             difference = elScrolltop - currentScrollHeight;
 
         $(event.currentTarget).closest('.rowContainer').removeClass('active');
-        
+
         elScrolltop = $(event.currentTarget)
             .closest('.rowContainer')
             .find('.descriptionShort .collapseButton')
@@ -251,11 +251,11 @@ define([
         });
     };
 
-    // HELPER FUNCTION 
+    // HELPER FUNCTION
     function sluggify(str) {
         var regPat = /[^a-zA-Z0-9_-]/g;
         var slug = str.toLowerCase().trim().replace(regPat,'-');
-        return slug; 
+        return slug;
     };
 
     function share(e){
@@ -269,22 +269,22 @@ define([
         console.log(config)
 
         if(btn.className.indexOf('share-twitter') > -1){
-            shareWindow = twitterBaseUrl + 
-                            encodeURIComponent(shareMessage) + 
-                            "&url=" + 
+            shareWindow = twitterBaseUrl +
+                            encodeURIComponent(shareMessage) +
+                            "&url=" +
                             encodeURIComponent(shareUrl);
 
         } else if( btn.className.indexOf('share-facebook') > -1 ){
-            shareWindow = facebookBaseUrl + 
-                            encodeURIComponent(shareUrl) + 
-                            "&picture=" + 
-                            encodeURIComponent(shareImage) + 
+            shareWindow = facebookBaseUrl +
+                            encodeURIComponent(shareUrl) +
+                            "&picture=" +
+                            encodeURIComponent(shareImage) +
                             "&redirect_uri=http://www.theguardian.com";
         }
 
-        window.open(shareWindow, "Share", "width=640,height=320"); 
+        window.open(shareWindow, "Share", "width=640,height=320");
     }
-    
+
     return {
         init: init
     };
