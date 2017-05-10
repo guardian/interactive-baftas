@@ -1,7 +1,7 @@
-// image size - big: 
-// 1300, 660 
+// image size - big:
+// 1300, 660
 
-// image size - small: 
+// image size - small:
 // 660, 660
 
 
@@ -66,16 +66,16 @@
 		font-family:"Guardian Egyptian Web","Egyptian Display","Guardian Text Egyptian Web","Egyptian Text",Georgia,serif;
 	}
 	h2{
-		font-size:42px;
+		font-size:44px;
 		line-height:1em;
 		margin-bottom:0;
 	}
 	h3{
-		color:#767676;
-		line-height:1.2em;
-		margin-top:0;
-		font-size:30px;
-		font-weight:bold;
+		color: #fb0;
+		line-height: 1.2em;
+		margin-top: 0;
+		font-size: 28px;
+		font-weight: 100;
 		margin-bottom:1.2em;
 	}
 	h4{
@@ -94,11 +94,11 @@
 			font-family:"Guardian Egyptian Web","Egyptian Display","Guardian Text Egyptian Web","Egyptian Text",Georgia,serif;
 			font-size: 30px;
 			font-weight: 100;
-			color:#767676;
+			color:#fb0;
 			line-height: 1.2em;
 			margin:0;
 		}
-		
+
 		.firstPar{
 			font-family:"Guardian Text Egyptian Web", "Guardian Egyptian Web", serif;
 			font-size:16px;
@@ -114,7 +114,6 @@
 	}
 
 	.rowContainer{
-		// background:#63717a; // 1a1a1a
 		margin-top:40px;
 		a{
 			text-decoration:underline;
@@ -133,7 +132,7 @@
 		.descriptionLong{
 			display:none;
 		}
-		
+
 		&.active{
 			.descriptionShort .collapseButton{
 				display:none;
@@ -154,6 +153,7 @@
 
 		h5{
 			margin:0;
+			margin-top: -4px;
 			font-size:30px;
 			line-height:1.2em;
 		}
@@ -163,10 +163,6 @@
 			margin: 0 auto;
 			padding: 30px 0px;
 			border-top: 1px solid rgba(255,255,255,0.4);
-
-			h5{
-				margin:0;
-			}
 
 			.rowDescription {
 				max-width: 620px;
@@ -183,7 +179,7 @@
 
 	.align-left,
 	.align-right {
-		.rowInformation{ 
+		.rowInformation{
 			.rowMeta { border-top: 0; }
 		}
 	}
@@ -198,15 +194,14 @@
 		padding-top: 0px;
 	}
 	.collapseButton{
-		border:2px solid #D0D0D0;
-		border-radius:40px;
-		height:30px;
+		border:1px solid #fb0;
+		border-radius: 36px;
+		height: 36px;
 		background:transparent;
-		color:#D0D0D0;
+		color: #fb0;
 		font-family:'Guardian Text Sans Web','Agate Sans',sans-serif;
-		font-weight:bold;
 		font-size:12px;
-		padding:0 12px;
+		padding:0 20px;
 		display:block;
 		outline:none;
 		cursor:pointer;
@@ -215,7 +210,7 @@
 		margin-top:12px;
 
 		&:hover{
-			background:#fff;
+			background: #fb0;
 			color:#333;
 		}
 	}
@@ -265,7 +260,7 @@
 			font-size:36px;
 		}
 		h4{
-			font-size:21px;
+			font-size:20px;
 		}
 		#interactiveWrapper{
 			padding:0 20px;
@@ -289,10 +284,10 @@
 			font-size:66px;
 		}
 		h3{
-			font-size:42px;
+			font-size:32px;
 		}
 		h4{
-			font-size:24px;
+			font-size:20px;
 		}
 
 		.rowContainer{
@@ -309,12 +304,12 @@
 		}
 
 		.descriptionShort p {
-			font-size: 42px;
+			font-size: 32px;
 		}
 		.collapseButton{
 			font-size:14px;
-			height:36px;
-			padding:0 20px;
+			height:44px;
+			padding:0 32px;
 		}
 		.rowContainer.active .descriptionLong h6{
 			font-size:14px;
@@ -360,7 +355,7 @@
 				margin:0 auto;
 				overflow:hidden;
 			}
-			
+
 			.rowMeta{
 				margin-top:12px;
 			}
@@ -373,7 +368,7 @@
 					display:block;
 				}
 			}
-			
+
 		}
 
 		.align-left {
@@ -424,7 +419,7 @@
 					}
 				}
 			}
-			
+
 		}
 		.align-left{
 			img{
@@ -469,7 +464,7 @@
 				}
 			}
 		}
-		
+
 	}
 
 	@media(min-width:1300px){
@@ -515,5 +510,3 @@
 	29%{height:0; opacity:0;}
 	30%{height:auto; opacity:1;}
 }
-
-
